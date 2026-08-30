@@ -207,6 +207,14 @@ All endpoints are prefixed with `/api/v1`. Interactive Swagger docs are availabl
 
 <h2 id="deployment">🌐 Deployment</h2>
 
+### 🟢 Live Demo
+The frontend is currently deployed and live on Vercel at:
+**[https://bloodsense.vercel.app](https://bloodsense.vercel.app)**
+
+*(Note: If your Vercel project generated a slightly different URL with a suffix, please update this link accordingly).*
+
+---
+
 ### Frontend → Vercel
 
 ```bash
@@ -243,3 +251,4 @@ Set your environment variables (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABAS
 <p align="center">
   Built with ❤️ using Google Gemini, Next.js, FastAPI & Supabase
 </p>
+
