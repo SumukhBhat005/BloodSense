@@ -34,7 +34,7 @@ export default function LandingPage() {
       }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "16px 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <span style={{ fontSize: 20, fontWeight: 800, color: "#0284c7", letterSpacing: "-0.5px" }}>BioInsight</span>
+            <span style={{ fontSize: 20, fontWeight: 800, color: "#0284c7", letterSpacing: "-0.5px" }}>BloodSense</span>
           </div>
           <div style={{ display: "flex", gap: 12 }}>
             <Link href="/dashboard/upload" style={{ padding: "10px 20px", borderRadius: 10, background: "linear-gradient(135deg, #0284c7, #2563eb)", color: "white", fontSize: 14, fontWeight: 600, textDecoration: "none", boxShadow: "0 2px 8px rgba(2,132,199,0.2)" }}>
@@ -76,7 +76,7 @@ export default function LandingPage() {
             pointerEvents: "none",
           }}
         >
-          <source src="/dna-background.mp4" type="video/mp4" />
+          <source src="/hero-background.mp4" type="video/mp4" />
         </video>
         {/* Radial Dark Overlay to guarantee high text contrast */}
         <div style={{
@@ -170,7 +170,7 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer style={{ borderTop: "1px solid #e2e8f0", background: "#ffffff", padding: "40px 24px", textAlign: "center", color: "#64748b", fontSize: 13 }}>
-        <p style={{ marginBottom: 8 }}>🧬 BioInsight — Health Literacy Assistant</p>
+        <p style={{ marginBottom: 8 }}>🩸 BloodSense — Health Literacy Assistant</p>
         <p>For educational purposes only. Always consult your doctor for medical advice.</p>
       </footer>
     </div>

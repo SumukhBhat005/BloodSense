@@ -27,7 +27,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         boxShadow: "1px 0 3px 0 rgba(0, 0, 0, 0.02)",
       }}>
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: 12, padding: "0 24px", marginBottom: 36, textDecoration: "none" }}>
-          <span style={{ fontSize: 20, fontWeight: 800, color: "#0f172a", letterSpacing: "-0.5px" }}>BioInsight</span>
+          <span style={{ fontSize: 20, fontWeight: 800, color: "#0f172a", letterSpacing: "-0.5px" }}>BloodSense</span>
         </Link>
 
         <nav style={{ flex: 1, padding: "0 14px", display: "flex", flexDirection: "column", gap: 4 }}>
@@ -56,7 +56,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         </nav>
 
         <div style={{ padding: "16px 20px", borderTop: "1px solid #e2e8f0", fontSize: 12, color: "#64748b" }}>
-          <span>🧬 BioInsight Medical Literacy Tool</span>
+          <span>🩸 BloodSense Medical Literacy Tool</span>
         </div>
       </aside>
 

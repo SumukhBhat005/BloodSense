@@ -1,34 +1,36 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/🩸-BloodSense-DC143C?style=for-the-badge&labelColor=1a1a2e" alt="BloodSense" height="60"/>
-</p>
+<h1 align="center">🩸 BloodSense</h1>
 
-<h1 align="center">BloodSense</h1>
+---
+
 <h3 align="center">AI-Powered Blood Report Analyzer</h3>
 
 <p align="center">
-  <em>Upload your blood test report. Get instant, plain-English insights powered by Google Gemini.</em>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js" alt="Next.js"/>
-  <img src="https://img.shields.io/badge/FastAPI-0.115-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"/>
-  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
-  <img src="https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Gemini-2.5_Flash-4285F4?style=flat-square&logo=google&logoColor=white" alt="Gemini"/>
-  <img src="https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?style=flat-square&logo=supabase&logoColor=white" alt="Supabase"/>
-</p>
-
-<p align="center">
-  <a href="#-features">Features</a> •
-  <a href="#%EF%B8%8F-tech-stack">Tech Stack</a> •
-  <a href="#-getting-started">Getting Started</a> •
-  <a href="#-api-reference">API Reference</a> •
-  <a href="#-deployment">Deployment</a>
+  <img src="https://img.shields.io/badge/Next.js-15+-black?style=for-the-badge&logo=next.js" alt="Next.js"/>
+  <img src="https://img.shields.io/badge/FastAPI-REST_API-black?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-DATABASE-3178C6?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+  <img src="https://img.shields.io/badge/Google_Gemini-AI-F4B400?style=for-the-badge&logo=google&logoColor=white" alt="Gemini"/>
+  <img src="https://img.shields.io/badge/Supabase-AUTH-black?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-UI-0ea5e9?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/>
 </p>
 
 ---
 
-## ✨ Features
+<p align="center">
+  <em>A full-stack web application that transforms raw blood test reports into actionable health insights using advanced AI extraction and clinical reference ranges.</em>
+</p>
+
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#tech-stack">Tech Stack</a> •
+  <a href="#project-structure">Project Structure</a> •
+  <a href="#getting-started">Getting Started</a> •
+  <a href="#api-reference">API Reference</a> •
+  <a href="#deployment">Deployment</a>
+</p>
+
+---
+
+<h2 id="features">✨ Features</h2>
 
 | Feature | Description |
 |:---|:---|
@@ -41,7 +43,7 @@
 
 ---
 
-## 🛠️ Tech Stack
+<h2 id="tech-stack">🛠️ Tech Stack</h2>
 
 <table>
   <tr>
@@ -72,7 +74,7 @@
 
 ---
 
-## 📁 Project Structure
+<h2 id="project-structure">📁 Project Structure</h2>
 
 ```
 bloodsense/
@@ -100,7 +102,7 @@ bloodsense/
 
 ---
 
-## 🚀 Getting Started
+<h2 id="getting-started">🚀 Getting Started</h2>
 
 ### Prerequisites
 
@@ -172,7 +174,7 @@ Open **[http://localhost:3000](http://localhost:3000)** in your browser.
 
 ---
 
-## 📡 API Reference
+<h2 id="api-reference">📡 API Reference</h2>
 
 All endpoints are prefixed with `/api/v1`. Interactive Swagger docs are available at [`/docs`](http://localhost:8000/docs).
 
@@ -203,7 +205,7 @@ All endpoints are prefixed with `/api/v1`. Interactive Swagger docs are availabl
 
 ---
 
-## 🌐 Deployment
+<h2 id="deployment">🌐 Deployment</h2>
 
 ### Frontend → Vercel
 

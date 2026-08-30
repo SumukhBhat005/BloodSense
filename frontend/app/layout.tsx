@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "BioInsight — AI Blood Report Analyzer",
+  title: "BloodSense — AI Blood Report Analyzer",
   description:
     "Understand your blood test results in plain English. Upload your lab report and get clear, educational explanations of your biomarkers.",
   keywords: "blood report, lab results, health analyzer, biomarker, educational",
   openGraph: {
-    title: "BioInsight — AI Blood Report Analyzer",
+    title: "BloodSense — AI Blood Report Analyzer",
     description: "Understand your blood test results in plain English.",
     type: "website",
   },

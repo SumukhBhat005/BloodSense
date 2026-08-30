@@ -38,7 +38,7 @@ export default function SignupPage() {
       <div style={{ width: "100%", maxWidth: 440 }}>
         <div style={{ textAlign: "center", marginBottom: 40 }}>
           <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: 10, textDecoration: "none", marginBottom: 32 }}>
-            <span style={{ fontSize: 22, fontWeight: 800, color: "#e8edf5", letterSpacing: "-0.5px" }}>BioInsight</span>
+            <span style={{ fontSize: 22, fontWeight: 800, color: "#e8edf5", letterSpacing: "-0.5px" }}>BloodSense</span>
           </Link>
           <h1 style={{ fontSize: 28, fontWeight: 700, color: "#e8edf5", marginBottom: 8 }}>{step === 1 ? "Create your account" : "Tell us about yourself"}</h1>
           <p style={{ color: "#8892a4", fontSize: 14 }}>{step === 1 ? "Free forever. No credit card required." : "Used to personalise your reference ranges."}</p>
