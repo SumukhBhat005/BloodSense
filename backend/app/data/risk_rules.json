@@ -1,0 +1,239 @@
+[
+  {
+    "id": "cardiovascular_lipid",
+    "label": "Cardiovascular Risk Indicators",
+    "description": "Elevated lipid levels are associated with cardiovascular health. Discuss these findings with your doctor.",
+    "conditions": [
+      {"biomarker": "LDL", "statuses": ["HIGH", "CRITICAL_HIGH", "BORDERLINE_HIGH"]},
+      {"biomarker": "Triglycerides", "statuses": ["HIGH", "CRITICAL_HIGH", "BORDERLINE_HIGH"]},
+      {"biomarker": "Total Cholesterol", "statuses": ["HIGH", "CRITICAL_HIGH", "BORDERLINE_HIGH"]}
+    ],
+    "match": "any",
+    "severity": "warning"
+  },
+  {
+    "id": "low_hdl_high_ldl",
+    "label": "Lipid Imbalance Detected",
+    "description": "Low HDL combined with high LDL may reflect an unfavorable lipid profile. Discuss with your doctor.",
+    "conditions": [
+      {"biomarker": "HDL", "statuses": ["LOW", "CRITICAL_LOW", "BORDERLINE_LOW"]},
+      {"biomarker": "LDL", "statuses": ["HIGH", "CRITICAL_HIGH", "BORDERLINE_HIGH"]}
+    ],
+    "match": "all",
+    "severity": "warning"
+  },
+  {
+    "id": "glucose_control",
+    "label": "Long-Term Glucose Control Indicators",
+    "description": "Elevated blood glucose and HbA1c together suggest the body may be having difficulty managing blood sugar over time. Discuss with your doctor.",
+    "conditions": [
+      {"biomarker": "HbA1c", "statuses": ["HIGH", "CRITICAL_HIGH", "BORDERLINE_HIGH"]},
+      {"biomarker": "Fasting Blood Sugar", "statuses": ["HIGH", "CRITICAL_HIGH", "BORDERLINE_HIGH"]}
+    ],
+    "match": "any",
+    "severity": "warning"
+  },
+  {
+    "id": "prediabetes_pattern",
+    "label": "Pre-Diabetes Pattern Indicators",
+    "description": "HbA1c in the borderline range combined with elevated fasting blood sugar may indicate a pattern worth discussing with your doctor.",
+    "conditions": [
+      {"biomarker": "HbA1c", "statuses": ["BORDERLINE_HIGH"]},
+      {"biomarker": "Fasting Blood Sugar", "statuses": ["BORDERLINE_HIGH"]}
+    ],
+    "match": "all",
+    "severity": "info"
+  },
+  {
+    "id": "thyroid_imbalance",
+    "label": "Thyroid Function Indicators",
+    "description": "Abnormal TSH or thyroid hormone levels may indicate thyroid function changes. Discuss with your doctor.",
+    "conditions": [
+      {"biomarker": "TSH", "statuses": ["HIGH", "CRITICAL_HIGH", "LOW", "CRITICAL_LOW"]},
+      {"biomarker": "T4 Free", "statuses": ["HIGH", "CRITICAL_HIGH", "LOW", "CRITICAL_LOW"]},
+      {"biomarker": "T3 Free", "statuses": ["HIGH", "CRITICAL_HIGH", "LOW", "CRITICAL_LOW"]}
+    ],
+    "match": "any",
+    "severity": "info"
+  },
+  {
+    "id": "anemia_pattern",
+    "label": "Anemia Pattern Indicators",
+    "description": "Low hemoglobin combined with low RBC or iron levels may suggest anemia. Discuss with your doctor.",
+    "conditions": [
+      {"biomarker": "Hemoglobin", "statuses": ["LOW", "CRITICAL_LOW"]},
+      {"biomarker": "RBC", "statuses": ["LOW", "CRITICAL_LOW"]},
+      {"biomarker": "Iron", "statuses": ["LOW", "CRITICAL_LOW"]},
+      {"biomarker": "Ferritin", "statuses": ["LOW", "CRITICAL_LOW"]}
+    ],
+    "match": "any",
+    "severity": "warning"
+  },
+  {
+    "id": "iron_deficiency",
+    "label": "Iron Store Indicators",
+    "description": "Low iron and ferritin may indicate depleted iron stores. Discuss with your doctor.",
+    "conditions": [
+      {"biomarker": "Iron", "statuses": ["LOW", "CRITICAL_LOW"]},
+      {"biomarker": "Ferritin", "statuses": ["LOW", "CRITICAL_LOW"]}
+    ],
+    "match": "all",
+    "severity": "info"
+  },
+  {
+    "id": "kidney_function",
+    "label": "Kidney Function Indicators",
+    "description": "Elevated creatinine or uric acid may indicate changes in kidney function. Discuss with your doctor.",
+    "conditions": [
+      {"biomarker": "Creatinine", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "Uric Acid", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "eGFR", "statuses": ["LOW", "CRITICAL_LOW"]}
+    ],
+    "match": "any",
+    "severity": "warning"
+  },
+  {
+    "id": "liver_function",
+    "label": "Liver Enzyme Indicators",
+    "description": "Elevated liver enzymes may indicate liver stress or damage. Discuss with your doctor.",
+    "conditions": [
+      {"biomarker": "ALT", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "AST", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "ALP", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "Bilirubin Total", "statuses": ["HIGH", "CRITICAL_HIGH"]}
+    ],
+    "match": "any",
+    "severity": "warning"
+  },
+  {
+    "id": "vitamin_deficiency",
+    "label": "Vitamin Deficiency Indicators",
+    "description": "Low vitamin levels can affect energy, immunity, and bone health. Discuss supplementation with your doctor.",
+    "conditions": [
+      {"biomarker": "Vitamin D", "statuses": ["LOW", "CRITICAL_LOW", "BORDERLINE_LOW"]},
+      {"biomarker": "Vitamin B12", "statuses": ["LOW", "CRITICAL_LOW", "BORDERLINE_LOW"]},
+      {"biomarker": "Folate", "statuses": ["LOW", "CRITICAL_LOW"]}
+    ],
+    "match": "any",
+    "severity": "info"
+  },
+  {
+    "id": "electrolyte_imbalance",
+    "label": "Electrolyte Imbalance Indicators",
+    "description": "Abnormal sodium or potassium levels can affect heart and nerve function. Discuss with your doctor.",
+    "conditions": [
+      {"biomarker": "Sodium", "statuses": ["HIGH", "CRITICAL_HIGH", "LOW", "CRITICAL_LOW"]},
+      {"biomarker": "Potassium", "statuses": ["HIGH", "CRITICAL_HIGH", "LOW", "CRITICAL_LOW"]},
+      {"biomarker": "Calcium", "statuses": ["HIGH", "CRITICAL_HIGH", "LOW", "CRITICAL_LOW"]}
+    ],
+    "match": "any",
+    "severity": "warning"
+  },
+  {
+    "id": "inflammation_markers",
+    "label": "Inflammation Indicators",
+    "description": "Elevated CRP is a general marker of inflammation in the body. Discuss with your doctor to identify potential causes.",
+    "conditions": [
+      {"biomarker": "CRP", "statuses": ["HIGH", "CRITICAL_HIGH", "BORDERLINE_HIGH"]}
+    ],
+    "match": "any",
+    "severity": "info"
+  },
+  {
+    "id": "microcytic_anemia",
+    "label": "Microcytic Anemia Pattern Indicators",
+    "description": "Low MCV combined with low MCH and low iron stores may suggest microcytic anemia. Discuss with your doctor.",
+    "conditions": [
+      {"biomarker": "MCV", "statuses": ["LOW", "CRITICAL_LOW"]},
+      {"biomarker": "MCH", "statuses": ["LOW"]},
+      {"biomarker": "Iron", "statuses": ["LOW", "CRITICAL_LOW"]},
+      {"biomarker": "Ferritin", "statuses": ["LOW", "CRITICAL_LOW"]}
+    ],
+    "match": "any",
+    "severity": "warning"
+  },
+  {
+    "id": "infection_inflammation",
+    "label": "Infection / Inflammation Indicators",
+    "description": "Elevated WBC, neutrophils, or ESR may suggest an active infection or inflammatory process. Discuss with your doctor.",
+    "conditions": [
+      {"biomarker": "WBC", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "Neutrophils", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "ESR", "statuses": ["HIGH", "CRITICAL_HIGH"]}
+    ],
+    "match": "any",
+    "severity": "warning"
+  },
+  {
+    "id": "renal_stress",
+    "label": "Renal Stress Indicators",
+    "description": "Elevated BUN and creatinine together with low eGFR may indicate kidney function changes. Discuss with your doctor.",
+    "conditions": [
+      {"biomarker": "BUN", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "Blood Urea", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "Creatinine", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "eGFR", "statuses": ["LOW", "CRITICAL_LOW"]}
+    ],
+    "match": "any",
+    "severity": "warning"
+  },
+  {
+    "id": "liver_damage_extended",
+    "label": "Extended Liver Stress Indicators",
+    "description": "Elevated GGT combined with elevated liver enzymes and bilirubin may indicate liver stress. Discuss with your doctor.",
+    "conditions": [
+      {"biomarker": "GGT", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "ALT", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "AST", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "Direct Bilirubin", "statuses": ["HIGH", "CRITICAL_HIGH"]}
+    ],
+    "match": "any",
+    "severity": "warning"
+  },
+  {
+    "id": "iron_overload",
+    "label": "Iron Overload Indicators",
+    "description": "Elevated iron, ferritin, and transferrin saturation may indicate iron overload. Discuss with your doctor.",
+    "conditions": [
+      {"biomarker": "Iron", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "Ferritin", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "Transferrin Saturation", "statuses": ["HIGH", "CRITICAL_HIGH"]}
+    ],
+    "match": "all",
+    "severity": "warning"
+  },
+  {
+    "id": "dehydration_pattern",
+    "label": "Dehydration Pattern Indicators",
+    "description": "Elevated hematocrit, sodium, and BUN may suggest dehydration. Discuss with your doctor.",
+    "conditions": [
+      {"biomarker": "Hematocrit", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "Sodium", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "BUN", "statuses": ["HIGH", "CRITICAL_HIGH"]}
+    ],
+    "match": "all",
+    "severity": "info"
+  },
+  {
+    "id": "eosinophilia",
+    "label": "Eosinophilia Indicators",
+    "description": "Elevated eosinophil count may indicate allergic reactions, parasitic infections, or other conditions. Discuss with your doctor.",
+    "conditions": [
+      {"biomarker": "Eosinophils", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "Absolute Eosinophil Count", "statuses": ["HIGH", "CRITICAL_HIGH"]}
+    ],
+    "match": "any",
+    "severity": "info"
+  },
+  {
+    "id": "urine_infection",
+    "label": "Urinary Tract Indicators",
+    "description": "Elevated pus cells or RBC in urine may indicate a urinary tract infection or other urinary conditions. Discuss with your doctor.",
+    "conditions": [
+      {"biomarker": "Urine WBC", "statuses": ["HIGH", "CRITICAL_HIGH"]},
+      {"biomarker": "Urine RBC", "statuses": ["HIGH", "CRITICAL_HIGH"]}
+    ],
+    "match": "any",
+    "severity": "warning"
+  }
+]

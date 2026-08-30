@@ -1,0 +1,1263 @@
+{
+  "HbA1c": {
+    "display_name": "HbA1c",
+    "unit": "%",
+    "aliases": ["a1c", "hba1c", "glycated hemoglobin", "glycosylated hemoglobin", "glycated haemoglobin", "glycosylated haemoglobin", "hemoglobin a1c", "haemoglobin a1c"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 3.0},
+        "LOW":             {"min": 3.0, "max": 4.0},
+        "BORDERLINE_LOW":  {"min": 4.0, "max": 4.5},
+        "NORMAL":          {"min": 4.5, "max": 5.6},
+        "BORDERLINE_HIGH": {"min": 5.7, "max": 6.4},
+        "HIGH":            {"min": 6.5, "max": 8.0},
+        "CRITICAL_HIGH":   {"min": 8.0}
+      }
+    }
+  },
+  "Hemoglobin": {
+    "display_name": "Hemoglobin",
+    "unit": "g/dL",
+    "aliases": ["hb", "haemoglobin", "hgb", "hemoglobin level"],
+    "ranges": {
+      "male": {
+        "CRITICAL_LOW":    {"max": 7.0},
+        "LOW":             {"min": 7.0, "max": 13.4},
+        "NORMAL":          {"min": 13.5, "max": 17.5},
+        "HIGH":            {"min": 17.5, "max": 20.0},
+        "CRITICAL_HIGH":   {"min": 20.0}
+      },
+      "female": {
+        "CRITICAL_LOW":    {"max": 7.0},
+        "LOW":             {"min": 7.0, "max": 11.9},
+        "NORMAL":          {"min": 12.0, "max": 15.5},
+        "HIGH":            {"min": 15.5, "max": 18.0},
+        "CRITICAL_HIGH":   {"min": 18.0}
+      },
+      "default": {
+        "CRITICAL_LOW":    {"max": 7.0},
+        "LOW":             {"min": 7.0, "max": 12.0},
+        "NORMAL":          {"min": 12.0, "max": 17.5},
+        "HIGH":            {"min": 17.5, "max": 20.0},
+        "CRITICAL_HIGH":   {"min": 20.0}
+      }
+    }
+  },
+  "Fasting Blood Sugar": {
+    "display_name": "Fasting Blood Sugar",
+    "unit": "mg/dL",
+    "aliases": ["fasting blood glucose", "fbg", "fbs", "fasting glucose", "blood glucose fasting", "fasting plasma glucose", "fpg"],
+    "unit_conversions": {"mmol/L": 18.0},
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 54},
+        "LOW":             {"min": 54, "max": 70},
+        "NORMAL":          {"min": 70, "max": 99},
+        "BORDERLINE_HIGH": {"min": 100, "max": 125},
+        "HIGH":            {"min": 126, "max": 200},
+        "CRITICAL_HIGH":   {"min": 200}
+      }
+    }
+  },
+  "Random Blood Sugar": {
+    "display_name": "Random Blood Sugar",
+    "unit": "mg/dL",
+    "aliases": ["random blood glucose", "rbs", "random glucose", "blood glucose random"],
+    "unit_conversions": {"mmol/L": 18.0},
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 54},
+        "LOW":             {"min": 54, "max": 70},
+        "NORMAL":          {"min": 70, "max": 139},
+        "BORDERLINE_HIGH": {"min": 140, "max": 199},
+        "HIGH":            {"min": 200, "max": 300},
+        "CRITICAL_HIGH":   {"min": 300}
+      }
+    }
+  },
+  "LDL": {
+    "display_name": "LDL Cholesterol",
+    "unit": "mg/dL",
+    "aliases": ["ldl cholesterol", "ldl-c", "low density lipoprotein", "ldl-cholesterol"],
+    "unit_conversions": {"mmol/L": 38.67},
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 99},
+        "BORDERLINE_HIGH": {"min": 100, "max": 129},
+        "HIGH":            {"min": 130, "max": 159},
+        "CRITICAL_HIGH":   {"min": 160}
+      }
+    }
+  },
+  "HDL": {
+    "display_name": "HDL Cholesterol",
+    "unit": "mg/dL",
+    "aliases": ["hdl cholesterol", "hdl-c", "high density lipoprotein", "hdl-cholesterol", "good cholesterol"],
+    "unit_conversions": {"mmol/L": 38.67},
+    "ranges": {
+      "male": {
+        "CRITICAL_LOW":    {"max": 20},
+        "LOW":             {"min": 20, "max": 39},
+        "BORDERLINE_LOW":  {"min": 40, "max": 59},
+        "NORMAL":          {"min": 60, "max": 100},
+        "HIGH":            {"min": 100}
+      },
+      "female": {
+        "CRITICAL_LOW":    {"max": 20},
+        "LOW":             {"min": 20, "max": 49},
+        "BORDERLINE_LOW":  {"min": 50, "max": 59},
+        "NORMAL":          {"min": 60, "max": 100},
+        "HIGH":            {"min": 100}
+      },
+      "default": {
+        "CRITICAL_LOW":    {"max": 20},
+        "LOW":             {"min": 20, "max": 39},
+        "BORDERLINE_LOW":  {"min": 40, "max": 59},
+        "NORMAL":          {"min": 60, "max": 100},
+        "HIGH":            {"min": 100}
+      }
+    }
+  },
+  "Total Cholesterol": {
+    "display_name": "Total Cholesterol",
+    "unit": "mg/dL",
+    "aliases": ["total cholesterol", "cholesterol total", "cholesterol"],
+    "unit_conversions": {"mmol/L": 38.67},
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 199},
+        "BORDERLINE_HIGH": {"min": 200, "max": 239},
+        "HIGH":            {"min": 240, "max": 280},
+        "CRITICAL_HIGH":   {"min": 280}
+      }
+    }
+  },
+  "Triglycerides": {
+    "display_name": "Triglycerides",
+    "unit": "mg/dL",
+    "aliases": ["tg", "triglyceride", "triacylglycerol", "trig"],
+    "unit_conversions": {"mmol/L": 88.57},
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 149},
+        "BORDERLINE_HIGH": {"min": 150, "max": 199},
+        "HIGH":            {"min": 200, "max": 499},
+        "CRITICAL_HIGH":   {"min": 500}
+      }
+    }
+  },
+  "TSH": {
+    "display_name": "TSH",
+    "unit": "mIU/L",
+    "aliases": ["thyroid stimulating hormone", "thyrotropin", "tsh level", "thyroid-stimulating hormone", "uiu/ml"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 0.01},
+        "LOW":             {"min": 0.01, "max": 0.39},
+        "NORMAL":          {"min": 0.4, "max": 4.0},
+        "BORDERLINE_HIGH": {"min": 4.0, "max": 6.0},
+        "HIGH":            {"min": 6.0, "max": 10.0},
+        "CRITICAL_HIGH":   {"min": 10.0}
+      }
+    }
+  },
+  "T4 Free": {
+    "display_name": "Free T4 (FT4)",
+    "unit": "ng/dL",
+    "aliases": ["free t4", "ft4", "free thyroxine", "thyroxine free", "t4 free"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 0.4},
+        "LOW":             {"min": 0.4, "max": 0.7},
+        "NORMAL":          {"min": 0.8, "max": 1.8},
+        "HIGH":            {"min": 1.8, "max": 2.5},
+        "CRITICAL_HIGH":   {"min": 2.5}
+      }
+    }
+  },
+  "T3 Free": {
+    "display_name": "Free T3 (FT3)",
+    "unit": "pg/mL",
+    "aliases": ["free t3", "ft3", "free triiodothyronine", "triiodothyronine free"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 1.0},
+        "LOW":             {"min": 1.0, "max": 2.3},
+        "NORMAL":          {"min": 2.3, "max": 4.2},
+        "HIGH":            {"min": 4.2, "max": 6.0},
+        "CRITICAL_HIGH":   {"min": 6.0}
+      }
+    }
+  },
+  "Creatinine": {
+    "display_name": "Creatinine",
+    "unit": "mg/dL",
+    "aliases": ["serum creatinine", "creatinine serum", "creat", "s.creatinine"],
+    "unit_conversions": {"umol/L": 0.01131, "µmol/L": 0.01131},
+    "ranges": {
+      "male": {
+        "CRITICAL_LOW":    {"max": 0.3},
+        "LOW":             {"min": 0.3, "max": 0.7},
+        "NORMAL":          {"min": 0.7, "max": 1.2},
+        "HIGH":            {"min": 1.2, "max": 2.0},
+        "CRITICAL_HIGH":   {"min": 2.0}
+      },
+      "female": {
+        "CRITICAL_LOW":    {"max": 0.3},
+        "LOW":             {"min": 0.3, "max": 0.5},
+        "NORMAL":          {"min": 0.5, "max": 1.1},
+        "HIGH":            {"min": 1.1, "max": 2.0},
+        "CRITICAL_HIGH":   {"min": 2.0}
+      },
+      "default": {
+        "CRITICAL_LOW":    {"max": 0.3},
+        "LOW":             {"min": 0.3, "max": 0.6},
+        "NORMAL":          {"min": 0.6, "max": 1.2},
+        "HIGH":            {"min": 1.2, "max": 2.0},
+        "CRITICAL_HIGH":   {"min": 2.0}
+      }
+    }
+  },
+  "eGFR": {
+    "display_name": "eGFR",
+    "unit": "mL/min/1.73m²",
+    "aliases": ["estimated gfr", "glomerular filtration rate", "egfr", "gfr"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 15},
+        "LOW":             {"min": 15, "max": 44},
+        "BORDERLINE_LOW":  {"min": 45, "max": 59},
+        "NORMAL":          {"min": 60, "max": 120},
+        "HIGH":            {"min": 120}
+      }
+    }
+  },
+  "Uric Acid": {
+    "display_name": "Uric Acid",
+    "unit": "mg/dL",
+    "aliases": ["uric acid level", "serum uric acid", "urate"],
+    "ranges": {
+      "male": {
+        "LOW":             {"max": 3.4},
+        "NORMAL":          {"min": 3.4, "max": 7.0},
+        "BORDERLINE_HIGH": {"min": 7.0, "max": 8.0},
+        "HIGH":            {"min": 8.0, "max": 10.0},
+        "CRITICAL_HIGH":   {"min": 10.0}
+      },
+      "female": {
+        "LOW":             {"max": 2.4},
+        "NORMAL":          {"min": 2.4, "max": 6.0},
+        "BORDERLINE_HIGH": {"min": 6.0, "max": 7.0},
+        "HIGH":            {"min": 7.0, "max": 9.0},
+        "CRITICAL_HIGH":   {"min": 9.0}
+      },
+      "default": {
+        "LOW":             {"max": 2.5},
+        "NORMAL":          {"min": 2.5, "max": 7.0},
+        "BORDERLINE_HIGH": {"min": 7.0, "max": 8.0},
+        "HIGH":            {"min": 8.0, "max": 10.0},
+        "CRITICAL_HIGH":   {"min": 10.0}
+      }
+    }
+  },
+  "Vitamin D": {
+    "display_name": "Vitamin D (25-OH)",
+    "unit": "ng/mL",
+    "aliases": ["25-oh vitamin d", "vitamin d3", "25-hydroxyvitamin d", "25 oh vitamin d", "vit d", "vitamin d total", "vitamin d 25 hydroxy", "25 hydroxy vitamin d", "cholecalciferol", "25-hydroxy cholecalciferol", "vitamin d 25-oh", "vit d3", "vitamin d (25-oh)", "25 hydroxy cholecalciferol"],
+    "unit_conversions": {"nmol/L": 0.4006},
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 10},
+        "LOW":             {"min": 10, "max": 19},
+        "BORDERLINE_LOW":  {"min": 20, "max": 29},
+        "NORMAL":          {"min": 30, "max": 100},
+        "HIGH":            {"min": 100, "max": 150},
+        "CRITICAL_HIGH":   {"min": 150}
+      }
+    }
+  },
+  "Vitamin B12": {
+    "display_name": "Vitamin B12",
+    "unit": "pg/mL",
+    "aliases": ["b12", "cobalamin", "cyanocobalamin", "serum b12", "vitamin b 12", "vit b12", "cyanocobalamin level", "serum vitamin b12", "b-12", "vit b-12", "vitamin b12 level"],
+    "unit_conversions": {"pmol/L": 0.7378},
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 100},
+        "LOW":             {"min": 100, "max": 199},
+        "BORDERLINE_LOW":  {"min": 200, "max": 299},
+        "NORMAL":          {"min": 300, "max": 900},
+        "HIGH":            {"min": 900, "max": 2000},
+        "CRITICAL_HIGH":   {"min": 2000}
+      }
+    }
+  },
+  "Folate": {
+    "display_name": "Folate (B9)",
+    "unit": "ng/mL",
+    "aliases": ["folic acid", "folate", "vitamin b9", "serum folate"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 2.0},
+        "LOW":             {"min": 2.0, "max": 3.9},
+        "NORMAL":          {"min": 4.0, "max": 20.0},
+        "HIGH":            {"min": 20.0}
+      }
+    }
+  },
+  "Platelet Count": {
+    "display_name": "Platelet Count",
+    "unit": "×10³/µL",
+    "aliases": ["platelets", "plt", "thrombocytes", "platelet", "platelet count", "thrombocyte count", "lakh/cumm"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 50},
+        "LOW":             {"min": 50, "max": 149},
+        "NORMAL":          {"min": 150, "max": 400},
+        "HIGH":            {"min": 400, "max": 600},
+        "CRITICAL_HIGH":   {"min": 600}
+      }
+    }
+  },
+  "WBC": {
+    "display_name": "WBC (White Blood Cells)",
+    "unit": "×10³/µL",
+    "aliases": ["white blood cells", "white blood count", "wbc count", "leukocyte count", "total wbc", "total leukocyte count", "tlc"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 2.0},
+        "LOW":             {"min": 2.0, "max": 4.4},
+        "NORMAL":          {"min": 4.5, "max": 11.0},
+        "HIGH":            {"min": 11.0, "max": 17.0},
+        "CRITICAL_HIGH":   {"min": 17.0}
+      }
+    }
+  },
+  "RBC": {
+    "display_name": "RBC (Red Blood Cells)",
+    "unit": "×10⁶/µL",
+    "aliases": ["red blood cells", "red blood count", "rbc count", "erythrocyte count", "total rbc"],
+    "ranges": {
+      "male": {
+        "CRITICAL_LOW":    {"max": 3.0},
+        "LOW":             {"min": 3.0, "max": 4.4},
+        "NORMAL":          {"min": 4.5, "max": 5.9},
+        "HIGH":            {"min": 5.9, "max": 7.0},
+        "CRITICAL_HIGH":   {"min": 7.0}
+      },
+      "female": {
+        "CRITICAL_LOW":    {"max": 2.5},
+        "LOW":             {"min": 2.5, "max": 3.9},
+        "NORMAL":          {"min": 4.0, "max": 5.2},
+        "HIGH":            {"min": 5.2, "max": 6.5},
+        "CRITICAL_HIGH":   {"min": 6.5}
+      },
+      "default": {
+        "CRITICAL_LOW":    {"max": 2.5},
+        "LOW":             {"min": 2.5, "max": 4.0},
+        "NORMAL":          {"min": 4.0, "max": 5.9},
+        "HIGH":            {"min": 5.9, "max": 7.0},
+        "CRITICAL_HIGH":   {"min": 7.0}
+      }
+    }
+  },
+  "Hematocrit": {
+    "display_name": "Hematocrit",
+    "unit": "%",
+    "aliases": ["hct", "packed cell volume", "pcv"],
+    "ranges": {
+      "male": {
+        "CRITICAL_LOW":    {"max": 21},
+        "LOW":             {"min": 21, "max": 40},
+        "NORMAL":          {"min": 41, "max": 53},
+        "HIGH":            {"min": 53, "max": 60},
+        "CRITICAL_HIGH":   {"min": 60}
+      },
+      "female": {
+        "CRITICAL_LOW":    {"max": 21},
+        "LOW":             {"min": 21, "max": 35},
+        "NORMAL":          {"min": 36, "max": 46},
+        "HIGH":            {"min": 46, "max": 55},
+        "CRITICAL_HIGH":   {"min": 55}
+      },
+      "default": {
+        "CRITICAL_LOW":    {"max": 21},
+        "LOW":             {"min": 21, "max": 36},
+        "NORMAL":          {"min": 36, "max": 53},
+        "HIGH":            {"min": 53, "max": 60},
+        "CRITICAL_HIGH":   {"min": 60}
+      }
+    }
+  },
+  "MCV": {
+    "display_name": "MCV",
+    "unit": "fL",
+    "aliases": ["mean corpuscular volume", "mean cell volume"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 60},
+        "LOW":             {"min": 60, "max": 79},
+        "NORMAL":          {"min": 80, "max": 100},
+        "HIGH":            {"min": 100, "max": 120},
+        "CRITICAL_HIGH":   {"min": 120}
+      }
+    }
+  },
+  "MCH": {
+    "display_name": "MCH",
+    "unit": "pg",
+    "aliases": ["mean corpuscular hemoglobin", "mean cell hemoglobin"],
+    "ranges": {
+      "default": {
+        "LOW":    {"max": 26},
+        "NORMAL": {"min": 27, "max": 33},
+        "HIGH":   {"min": 34}
+      }
+    }
+  },
+  "MCHC": {
+    "display_name": "MCHC",
+    "unit": "g/dL",
+    "aliases": ["mean corpuscular hemoglobin concentration", "mean cell hemoglobin concentration"],
+    "ranges": {
+      "default": {
+        "LOW":    {"max": 31},
+        "NORMAL": {"min": 32, "max": 36},
+        "HIGH":   {"min": 36}
+      }
+    }
+  },
+  "Iron": {
+    "display_name": "Serum Iron",
+    "unit": "µg/dL",
+    "aliases": ["serum iron", "fe", "iron level", "iron serum"],
+    "ranges": {
+      "male": {
+        "CRITICAL_LOW":    {"max": 30},
+        "LOW":             {"min": 30, "max": 65},
+        "NORMAL":          {"min": 65, "max": 175},
+        "HIGH":            {"min": 175, "max": 250},
+        "CRITICAL_HIGH":   {"min": 250}
+      },
+      "female": {
+        "CRITICAL_LOW":    {"max": 30},
+        "LOW":             {"min": 30, "max": 50},
+        "NORMAL":          {"min": 50, "max": 170},
+        "HIGH":            {"min": 170, "max": 250},
+        "CRITICAL_HIGH":   {"min": 250}
+      },
+      "default": {
+        "CRITICAL_LOW":    {"max": 30},
+        "LOW":             {"min": 30, "max": 60},
+        "NORMAL":          {"min": 60, "max": 170},
+        "HIGH":            {"min": 170, "max": 250},
+        "CRITICAL_HIGH":   {"min": 250}
+      }
+    }
+  },
+  "Ferritin": {
+    "display_name": "Ferritin",
+    "unit": "ng/mL",
+    "aliases": ["serum ferritin", "ferritin level"],
+    "ranges": {
+      "male": {
+        "CRITICAL_LOW":    {"max": 5},
+        "LOW":             {"min": 5, "max": 23},
+        "NORMAL":          {"min": 24, "max": 336},
+        "HIGH":            {"min": 336, "max": 600},
+        "CRITICAL_HIGH":   {"min": 600}
+      },
+      "female": {
+        "CRITICAL_LOW":    {"max": 5},
+        "LOW":             {"min": 5, "max": 11},
+        "NORMAL":          {"min": 12, "max": 307},
+        "HIGH":            {"min": 307, "max": 500},
+        "CRITICAL_HIGH":   {"min": 500}
+      },
+      "default": {
+        "CRITICAL_LOW":    {"max": 5},
+        "LOW":             {"min": 5, "max": 15},
+        "NORMAL":          {"min": 15, "max": 336},
+        "HIGH":            {"min": 336, "max": 600},
+        "CRITICAL_HIGH":   {"min": 600}
+      }
+    }
+  },
+  "Sodium": {
+    "display_name": "Sodium",
+    "unit": "mEq/L",
+    "aliases": ["serum sodium", "na", "sodium level", "s.sodium"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 120},
+        "LOW":             {"min": 120, "max": 135},
+        "NORMAL":          {"min": 136, "max": 145},
+        "HIGH":            {"min": 145, "max": 155},
+        "CRITICAL_HIGH":   {"min": 155}
+      }
+    }
+  },
+  "Potassium": {
+    "display_name": "Potassium",
+    "unit": "mEq/L",
+    "aliases": ["serum potassium", "k", "potassium level", "s.potassium"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 2.5},
+        "LOW":             {"min": 2.5, "max": 3.4},
+        "NORMAL":          {"min": 3.5, "max": 5.0},
+        "HIGH":            {"min": 5.0, "max": 6.0},
+        "CRITICAL_HIGH":   {"min": 6.0}
+      }
+    }
+  },
+  "Calcium": {
+    "display_name": "Calcium",
+    "unit": "mg/dL",
+    "aliases": ["serum calcium", "ca", "total calcium", "calcium total"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 6.0},
+        "LOW":             {"min": 6.0, "max": 8.4},
+        "NORMAL":          {"min": 8.5, "max": 10.5},
+        "HIGH":            {"min": 10.5, "max": 13.0},
+        "CRITICAL_HIGH":   {"min": 13.0}
+      }
+    }
+  },
+  "ALT": {
+    "display_name": "ALT (SGPT)",
+    "unit": "U/L",
+    "aliases": ["alanine aminotransferase", "sgpt", "alt level", "alanine transaminase"],
+    "ranges": {
+      "male": {
+        "NORMAL":          {"min": 0, "max": 56},
+        "BORDERLINE_HIGH": {"min": 56, "max": 80},
+        "HIGH":            {"min": 80, "max": 200},
+        "CRITICAL_HIGH":   {"min": 200}
+      },
+      "female": {
+        "NORMAL":          {"min": 0, "max": 45},
+        "BORDERLINE_HIGH": {"min": 45, "max": 70},
+        "HIGH":            {"min": 70, "max": 200},
+        "CRITICAL_HIGH":   {"min": 200}
+      },
+      "default": {
+        "NORMAL":          {"min": 0, "max": 56},
+        "BORDERLINE_HIGH": {"min": 56, "max": 80},
+        "HIGH":            {"min": 80, "max": 200},
+        "CRITICAL_HIGH":   {"min": 200}
+      }
+    }
+  },
+  "AST": {
+    "display_name": "AST (SGOT)",
+    "unit": "U/L",
+    "aliases": ["aspartate aminotransferase", "sgot", "ast level", "aspartate transaminase"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 40},
+        "BORDERLINE_HIGH": {"min": 40, "max": 60},
+        "HIGH":            {"min": 60, "max": 200},
+        "CRITICAL_HIGH":   {"min": 200}
+      }
+    }
+  },
+  "ALP": {
+    "display_name": "Alkaline Phosphatase (ALP)",
+    "unit": "U/L",
+    "aliases": ["alkaline phosphatase", "alp level", "alk phos"],
+    "ranges": {
+      "default": {
+        "LOW":             {"max": 44},
+        "NORMAL":          {"min": 44, "max": 147},
+        "BORDERLINE_HIGH": {"min": 147, "max": 200},
+        "HIGH":            {"min": 200, "max": 400},
+        "CRITICAL_HIGH":   {"min": 400}
+      }
+    }
+  },
+  "Bilirubin Total": {
+    "display_name": "Total Bilirubin",
+    "unit": "mg/dL",
+    "aliases": ["total bilirubin", "bilirubin total", "t.bilirubin", "tbil"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 1.2},
+        "BORDERLINE_HIGH": {"min": 1.2, "max": 2.0},
+        "HIGH":            {"min": 2.0, "max": 5.0},
+        "CRITICAL_HIGH":   {"min": 5.0}
+      }
+    }
+  },
+  "Albumin": {
+    "display_name": "Albumin",
+    "unit": "g/dL",
+    "aliases": ["serum albumin", "albumin level"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 2.0},
+        "LOW":             {"min": 2.0, "max": 3.4},
+        "NORMAL":          {"min": 3.5, "max": 5.0},
+        "HIGH":            {"min": 5.0}
+      }
+    }
+  },
+  "Total Protein": {
+    "display_name": "Total Protein",
+    "unit": "g/dL",
+    "aliases": ["serum protein", "total serum protein", "protein total"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 4.0},
+        "LOW":             {"min": 4.0, "max": 6.3},
+        "NORMAL":          {"min": 6.4, "max": 8.3},
+        "HIGH":            {"min": 8.3, "max": 10.0},
+        "CRITICAL_HIGH":   {"min": 10.0}
+      }
+    }
+  },
+  "CRP": {
+    "display_name": "C-Reactive Protein (CRP)",
+    "unit": "mg/L",
+    "aliases": ["c-reactive protein", "crp level", "hs-crp", "high sensitivity crp", "hscrp"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 1.0},
+        "BORDERLINE_HIGH": {"min": 1.0, "max": 3.0},
+        "HIGH":            {"min": 3.0, "max": 10.0},
+        "CRITICAL_HIGH":   {"min": 10.0}
+      }
+    }
+  },
+  "Insulin": {
+    "display_name": "Fasting Insulin",
+    "unit": "µIU/mL",
+    "aliases": ["insulin fasting", "fasting insulin level", "serum insulin"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 2},
+        "LOW":             {"min": 2, "max": 2.9},
+        "NORMAL":          {"min": 3, "max": 25},
+        "HIGH":            {"min": 25, "max": 50},
+        "CRITICAL_HIGH":   {"min": 50}
+      }
+    }
+  },
+  "Cortisol": {
+    "display_name": "Cortisol (Morning)",
+    "unit": "µg/dL",
+    "aliases": ["serum cortisol", "cortisol am", "morning cortisol"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 3},
+        "LOW":             {"min": 3, "max": 5},
+        "NORMAL":          {"min": 6, "max": 23},
+        "HIGH":            {"min": 23, "max": 40},
+        "CRITICAL_HIGH":   {"min": 40}
+      }
+    }
+  },
+  "Post Prandial Blood Sugar": {
+    "display_name": "Post Prandial Blood Sugar",
+    "unit": "mg/dL",
+    "aliases": ["ppbs", "post prandial glucose", "pp blood sugar", "pp glucose", "2 hour post prandial", "post meal glucose", "blood glucose pp", "2hr pp glucose", "pp sugar"],
+    "unit_conversions": {"mmol/L": 18.0},
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 54},
+        "LOW":             {"min": 54, "max": 70},
+        "NORMAL":          {"min": 70, "max": 139},
+        "BORDERLINE_HIGH": {"min": 140, "max": 199},
+        "HIGH":            {"min": 200, "max": 300},
+        "CRITICAL_HIGH":   {"min": 300}
+      }
+    }
+  },
+  "ESR": {
+    "display_name": "ESR (Erythrocyte Sedimentation Rate)",
+    "unit": "mm/hr",
+    "aliases": ["erythrocyte sedimentation rate", "esr level", "sed rate", "sedimentation rate", "westergren esr"],
+    "ranges": {
+      "male": {
+        "NORMAL":          {"min": 0, "max": 15},
+        "BORDERLINE_HIGH": {"min": 15, "max": 20},
+        "HIGH":            {"min": 20, "max": 50},
+        "CRITICAL_HIGH":   {"min": 50}
+      },
+      "female": {
+        "NORMAL":          {"min": 0, "max": 20},
+        "BORDERLINE_HIGH": {"min": 20, "max": 30},
+        "HIGH":            {"min": 30, "max": 60},
+        "CRITICAL_HIGH":   {"min": 60}
+      },
+      "default": {
+        "NORMAL":          {"min": 0, "max": 20},
+        "BORDERLINE_HIGH": {"min": 20, "max": 30},
+        "HIGH":            {"min": 30, "max": 60},
+        "CRITICAL_HIGH":   {"min": 60}
+      }
+    }
+  },
+  "RDW": {
+    "display_name": "RDW (Red Cell Distribution Width)",
+    "unit": "%",
+    "aliases": ["red cell distribution width", "rdw-cv", "rdw cv", "red cell distribution width cv"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 11.5, "max": 14.5},
+        "BORDERLINE_HIGH": {"min": 14.5, "max": 16.0},
+        "HIGH":            {"min": 16.0, "max": 20.0},
+        "CRITICAL_HIGH":   {"min": 20.0}
+      }
+    }
+  },
+  "RDW-SD": {
+    "display_name": "RDW-SD",
+    "unit": "fL",
+    "aliases": ["rdw sd", "red cell distribution width sd", "rdw-sd"],
+    "ranges": {
+      "default": {
+        "LOW":             {"max": 35},
+        "NORMAL":          {"min": 35, "max": 56},
+        "HIGH":            {"min": 56}
+      }
+    }
+  },
+  "MPV": {
+    "display_name": "MPV (Mean Platelet Volume)",
+    "unit": "fL",
+    "aliases": ["mean platelet volume", "mpv level"],
+    "ranges": {
+      "default": {
+        "LOW":             {"max": 7.5},
+        "NORMAL":          {"min": 7.5, "max": 11.5},
+        "HIGH":            {"min": 11.5, "max": 14.0},
+        "CRITICAL_HIGH":   {"min": 14.0}
+      }
+    }
+  },
+  "PDW": {
+    "display_name": "PDW (Platelet Distribution Width)",
+    "unit": "fL",
+    "aliases": ["platelet distribution width", "pdw level"],
+    "ranges": {
+      "default": {
+        "LOW":             {"max": 9.0},
+        "NORMAL":          {"min": 9.0, "max": 17.0},
+        "HIGH":            {"min": 17.0}
+      }
+    }
+  },
+  "P-LCR": {
+    "display_name": "P-LCR (Platelet Large Cell Ratio)",
+    "unit": "%",
+    "aliases": ["platelet large cell ratio", "p lcr", "plcr"],
+    "ranges": {
+      "default": {
+        "LOW":             {"max": 15.0},
+        "NORMAL":          {"min": 15.0, "max": 35.0},
+        "HIGH":            {"min": 35.0}
+      }
+    }
+  },
+  "PCT": {
+    "display_name": "Plateletcrit (PCT)",
+    "unit": "%",
+    "aliases": ["plateletcrit", "platelet crit", "pct level"],
+    "ranges": {
+      "default": {
+        "LOW":             {"max": 0.15},
+        "NORMAL":          {"min": 0.15, "max": 0.40},
+        "HIGH":            {"min": 0.40}
+      }
+    }
+  },
+  "Neutrophils": {
+    "display_name": "Neutrophils",
+    "unit": "%",
+    "aliases": ["neutrophil", "neutrophils %", "neutrophil %", "neut%", "neut", "segmented neutrophils", "polymorphs"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 20},
+        "LOW":             {"min": 20, "max": 39},
+        "NORMAL":          {"min": 40, "max": 70},
+        "HIGH":            {"min": 70, "max": 80},
+        "CRITICAL_HIGH":   {"min": 80}
+      }
+    }
+  },
+  "Absolute Neutrophil Count": {
+    "display_name": "Absolute Neutrophil Count (ANC)",
+    "unit": "cells/µL",
+    "aliases": ["anc", "absolute neutrophil", "neutrophil absolute", "neutrophil count absolute", "abs neutrophil count", "abs. neutrophil count"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 500},
+        "LOW":             {"min": 500, "max": 1999},
+        "NORMAL":          {"min": 2000, "max": 7000},
+        "HIGH":            {"min": 7000, "max": 10000},
+        "CRITICAL_HIGH":   {"min": 10000}
+      }
+    }
+  },
+  "Lymphocytes": {
+    "display_name": "Lymphocytes",
+    "unit": "%",
+    "aliases": ["lymphocyte", "lymphocytes %", "lymphocyte %", "lymph%", "lymph"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 10},
+        "LOW":             {"min": 10, "max": 19},
+        "NORMAL":          {"min": 20, "max": 40},
+        "HIGH":            {"min": 40, "max": 60},
+        "CRITICAL_HIGH":   {"min": 60}
+      }
+    }
+  },
+  "Absolute Lymphocyte Count": {
+    "display_name": "Absolute Lymphocyte Count (ALC)",
+    "unit": "cells/µL",
+    "aliases": ["alc", "absolute lymphocyte", "lymphocyte absolute", "lymphocyte count absolute", "abs lymphocyte count", "abs. lymphocyte count"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 500},
+        "LOW":             {"min": 500, "max": 999},
+        "NORMAL":          {"min": 1000, "max": 4800},
+        "HIGH":            {"min": 4800, "max": 8000},
+        "CRITICAL_HIGH":   {"min": 8000}
+      }
+    }
+  },
+  "Monocytes": {
+    "display_name": "Monocytes",
+    "unit": "%",
+    "aliases": ["monocyte", "monocytes %", "monocyte %", "mono%", "mono"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 10},
+        "BORDERLINE_HIGH": {"min": 10, "max": 12},
+        "HIGH":            {"min": 12, "max": 20},
+        "CRITICAL_HIGH":   {"min": 20}
+      }
+    }
+  },
+  "Absolute Monocyte Count": {
+    "display_name": "Absolute Monocyte Count (AMC)",
+    "unit": "cells/µL",
+    "aliases": ["amc", "absolute monocyte", "monocyte absolute", "monocyte count absolute", "abs monocyte count", "abs. monocyte count"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 100, "max": 800},
+        "HIGH":            {"min": 800, "max": 1500},
+        "CRITICAL_HIGH":   {"min": 1500}
+      }
+    }
+  },
+  "Eosinophils": {
+    "display_name": "Eosinophils",
+    "unit": "%",
+    "aliases": ["eosinophil", "eosinophils %", "eosinophil %", "eos%", "eos"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 6},
+        "BORDERLINE_HIGH": {"min": 6, "max": 8},
+        "HIGH":            {"min": 8, "max": 15},
+        "CRITICAL_HIGH":   {"min": 15}
+      }
+    }
+  },
+  "Absolute Eosinophil Count": {
+    "display_name": "Absolute Eosinophil Count (AEC)",
+    "unit": "cells/µL",
+    "aliases": ["aec", "absolute eosinophil", "eosinophil absolute", "eosinophil count absolute", "abs eosinophil count", "abs. eosinophil count"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 500},
+        "BORDERLINE_HIGH": {"min": 500, "max": 700},
+        "HIGH":            {"min": 700, "max": 1500},
+        "CRITICAL_HIGH":   {"min": 1500}
+      }
+    }
+  },
+  "Basophils": {
+    "display_name": "Basophils",
+    "unit": "%",
+    "aliases": ["basophil", "basophils %", "basophil %", "baso%", "baso"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 2},
+        "HIGH":            {"min": 2, "max": 5},
+        "CRITICAL_HIGH":   {"min": 5}
+      }
+    }
+  },
+  "Absolute Basophil Count": {
+    "display_name": "Absolute Basophil Count (ABC)",
+    "unit": "cells/µL",
+    "aliases": ["abc", "absolute basophil", "basophil absolute", "basophil count absolute", "abs basophil count", "abs. basophil count"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 200},
+        "HIGH":            {"min": 200, "max": 500},
+        "CRITICAL_HIGH":   {"min": 500}
+      }
+    }
+  },
+  "Reticulocyte Count": {
+    "display_name": "Reticulocyte Count",
+    "unit": "%",
+    "aliases": ["reticulocyte", "retic count", "reticulocytes", "retic"],
+    "ranges": {
+      "default": {
+        "LOW":             {"max": 0.5},
+        "NORMAL":          {"min": 0.5, "max": 2.5},
+        "HIGH":            {"min": 2.5, "max": 5.0},
+        "CRITICAL_HIGH":   {"min": 5.0}
+      }
+    }
+  },
+  "BUN": {
+    "display_name": "BUN (Blood Urea Nitrogen)",
+    "unit": "mg/dL",
+    "aliases": ["blood urea nitrogen", "bun level", "b.u.n", "b.u.n."],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 3},
+        "LOW":             {"min": 3, "max": 6},
+        "NORMAL":          {"min": 7, "max": 20},
+        "BORDERLINE_HIGH": {"min": 20, "max": 25},
+        "HIGH":            {"min": 25, "max": 50},
+        "CRITICAL_HIGH":   {"min": 50}
+      }
+    }
+  },
+  "Blood Urea": {
+    "display_name": "Blood Urea",
+    "unit": "mg/dL",
+    "aliases": ["urea", "serum urea", "urea level", "s.urea", "blood urea level"],
+    "ranges": {
+      "default": {
+        "LOW":             {"max": 13},
+        "NORMAL":          {"min": 13, "max": 43},
+        "BORDERLINE_HIGH": {"min": 43, "max": 50},
+        "HIGH":            {"min": 50, "max": 100},
+        "CRITICAL_HIGH":   {"min": 100}
+      }
+    }
+  },
+  "BUN Creatinine Ratio": {
+    "display_name": "BUN/Creatinine Ratio",
+    "unit": "",
+    "aliases": ["bun/creatinine ratio", "bun creatinine", "bun/creat ratio", "bun to creatinine ratio"],
+    "ranges": {
+      "default": {
+        "LOW":             {"max": 10},
+        "NORMAL":          {"min": 10, "max": 20},
+        "HIGH":            {"min": 20, "max": 30},
+        "CRITICAL_HIGH":   {"min": 30}
+      }
+    }
+  },
+  "Direct Bilirubin": {
+    "display_name": "Direct Bilirubin",
+    "unit": "mg/dL",
+    "aliases": ["bilirubin direct", "conjugated bilirubin", "d. bilirubin", "d.bilirubin", "dbil"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 0.3},
+        "BORDERLINE_HIGH": {"min": 0.3, "max": 0.5},
+        "HIGH":            {"min": 0.5, "max": 1.5},
+        "CRITICAL_HIGH":   {"min": 1.5}
+      }
+    }
+  },
+  "Indirect Bilirubin": {
+    "display_name": "Indirect Bilirubin",
+    "unit": "mg/dL",
+    "aliases": ["bilirubin indirect", "unconjugated bilirubin", "i. bilirubin", "i.bilirubin"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 1.0},
+        "BORDERLINE_HIGH": {"min": 1.0, "max": 1.5},
+        "HIGH":            {"min": 1.5, "max": 3.0},
+        "CRITICAL_HIGH":   {"min": 3.0}
+      }
+    }
+  },
+  "GGT": {
+    "display_name": "GGT (Gamma-Glutamyl Transferase)",
+    "unit": "U/L",
+    "aliases": ["gamma gt", "gamma-glutamyl transferase", "gamma glutamyl transpeptidase", "ggt level", "gamma-gt", "ggtp", "gamma glutamyl transferase"],
+    "ranges": {
+      "male": {
+        "NORMAL":          {"min": 0, "max": 65},
+        "BORDERLINE_HIGH": {"min": 65, "max": 100},
+        "HIGH":            {"min": 100, "max": 300},
+        "CRITICAL_HIGH":   {"min": 300}
+      },
+      "female": {
+        "NORMAL":          {"min": 0, "max": 45},
+        "BORDERLINE_HIGH": {"min": 45, "max": 70},
+        "HIGH":            {"min": 70, "max": 300},
+        "CRITICAL_HIGH":   {"min": 300}
+      },
+      "default": {
+        "NORMAL":          {"min": 0, "max": 55},
+        "BORDERLINE_HIGH": {"min": 55, "max": 100},
+        "HIGH":            {"min": 100, "max": 300},
+        "CRITICAL_HIGH":   {"min": 300}
+      }
+    }
+  },
+  "Globulin": {
+    "display_name": "Globulin",
+    "unit": "g/dL",
+    "aliases": ["serum globulin", "globulin level", "total globulin"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 1.5},
+        "LOW":             {"min": 1.5, "max": 2.0},
+        "NORMAL":          {"min": 2.0, "max": 3.5},
+        "HIGH":            {"min": 3.5, "max": 5.0},
+        "CRITICAL_HIGH":   {"min": 5.0}
+      }
+    }
+  },
+  "AG Ratio": {
+    "display_name": "A/G Ratio (Albumin/Globulin)",
+    "unit": "",
+    "aliases": ["a/g ratio", "albumin globulin ratio", "albumin/globulin ratio", "a:g ratio", "ag ratio", "a g ratio"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 0.5},
+        "LOW":             {"min": 0.5, "max": 1.0},
+        "NORMAL":          {"min": 1.0, "max": 2.2},
+        "HIGH":            {"min": 2.2}
+      }
+    }
+  },
+  "VLDL": {
+    "display_name": "VLDL Cholesterol",
+    "unit": "mg/dL",
+    "aliases": ["vldl cholesterol", "vldl-c", "very low density lipoprotein", "vldl-cholesterol"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 30},
+        "BORDERLINE_HIGH": {"min": 30, "max": 40},
+        "HIGH":            {"min": 40, "max": 60},
+        "CRITICAL_HIGH":   {"min": 60}
+      }
+    }
+  },
+  "LDL HDL Ratio": {
+    "display_name": "LDL/HDL Ratio",
+    "unit": "",
+    "aliases": ["ldl/hdl ratio", "ldl to hdl ratio", "ldl hdl", "ldl:hdl ratio"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 3.5},
+        "BORDERLINE_HIGH": {"min": 3.5, "max": 4.5},
+        "HIGH":            {"min": 4.5, "max": 6.0},
+        "CRITICAL_HIGH":   {"min": 6.0}
+      }
+    }
+  },
+  "TC HDL Ratio": {
+    "display_name": "Total Cholesterol/HDL Ratio",
+    "unit": "",
+    "aliases": ["tc/hdl ratio", "total cholesterol/hdl ratio", "cholesterol hdl ratio", "tc:hdl ratio", "total cholesterol to hdl ratio", "tc hdl"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 5.0},
+        "BORDERLINE_HIGH": {"min": 5.0, "max": 6.0},
+        "HIGH":            {"min": 6.0, "max": 8.0},
+        "CRITICAL_HIGH":   {"min": 8.0}
+      }
+    }
+  },
+  "TIBC": {
+    "display_name": "TIBC (Total Iron Binding Capacity)",
+    "unit": "µg/dL",
+    "aliases": ["total iron binding capacity", "tibc level", "iron binding capacity"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 150},
+        "LOW":             {"min": 150, "max": 249},
+        "NORMAL":          {"min": 250, "max": 370},
+        "HIGH":            {"min": 370, "max": 500},
+        "CRITICAL_HIGH":   {"min": 500}
+      }
+    }
+  },
+  "UIBC": {
+    "display_name": "UIBC (Unsaturated Iron Binding Capacity)",
+    "unit": "µg/dL",
+    "aliases": ["unsaturated iron binding capacity", "uibc level"],
+    "ranges": {
+      "default": {
+        "LOW":             {"max": 110},
+        "NORMAL":          {"min": 110, "max": 370},
+        "HIGH":            {"min": 370}
+      }
+    }
+  },
+  "Transferrin Saturation": {
+    "display_name": "Transferrin Saturation",
+    "unit": "%",
+    "aliases": ["transferrin sat", "tsat", "iron saturation", "transferrin saturation %", "% transferrin saturation", "tsat%"],
+    "ranges": {
+      "male": {
+        "CRITICAL_LOW":    {"max": 10},
+        "LOW":             {"min": 10, "max": 20},
+        "NORMAL":          {"min": 20, "max": 50},
+        "HIGH":            {"min": 50, "max": 70},
+        "CRITICAL_HIGH":   {"min": 70}
+      },
+      "female": {
+        "CRITICAL_LOW":    {"max": 10},
+        "LOW":             {"min": 10, "max": 15},
+        "NORMAL":          {"min": 15, "max": 50},
+        "HIGH":            {"min": 50, "max": 70},
+        "CRITICAL_HIGH":   {"min": 70}
+      },
+      "default": {
+        "CRITICAL_LOW":    {"max": 10},
+        "LOW":             {"min": 10, "max": 20},
+        "NORMAL":          {"min": 20, "max": 50},
+        "HIGH":            {"min": 50, "max": 70},
+        "CRITICAL_HIGH":   {"min": 70}
+      }
+    }
+  },
+  "Chloride": {
+    "display_name": "Chloride",
+    "unit": "mEq/L",
+    "aliases": ["serum chloride", "cl", "chloride level", "s.chloride"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 80},
+        "LOW":             {"min": 80, "max": 97},
+        "NORMAL":          {"min": 98, "max": 106},
+        "HIGH":            {"min": 106, "max": 120},
+        "CRITICAL_HIGH":   {"min": 120}
+      }
+    }
+  },
+  "Bicarbonate": {
+    "display_name": "Bicarbonate (CO2)",
+    "unit": "mEq/L",
+    "aliases": ["hco3", "serum bicarbonate", "co2", "total co2", "carbon dioxide", "tco2", "bicarbonate level"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 15},
+        "LOW":             {"min": 15, "max": 21},
+        "NORMAL":          {"min": 22, "max": 29},
+        "HIGH":            {"min": 29, "max": 35},
+        "CRITICAL_HIGH":   {"min": 35}
+      }
+    }
+  },
+  "Magnesium": {
+    "display_name": "Magnesium",
+    "unit": "mg/dL",
+    "aliases": ["serum magnesium", "mg", "magnesium level", "s.magnesium"],
+    "unit_conversions": {"mEq/L": 1.216, "mmol/L": 2.431},
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 1.0},
+        "LOW":             {"min": 1.0, "max": 1.6},
+        "NORMAL":          {"min": 1.7, "max": 2.2},
+        "HIGH":            {"min": 2.2, "max": 3.0},
+        "CRITICAL_HIGH":   {"min": 3.0}
+      }
+    }
+  },
+  "Phosphorus": {
+    "display_name": "Phosphorus",
+    "unit": "mg/dL",
+    "aliases": ["serum phosphorus", "phosphate", "inorganic phosphorus", "phosphorus level", "s.phosphorus", "serum phosphate"],
+    "ranges": {
+      "default": {
+        "CRITICAL_LOW":    {"max": 1.0},
+        "LOW":             {"min": 1.0, "max": 2.4},
+        "NORMAL":          {"min": 2.5, "max": 4.5},
+        "HIGH":            {"min": 4.5, "max": 6.0},
+        "CRITICAL_HIGH":   {"min": 6.0}
+      }
+    }
+  },
+  "Beta HCG": {
+    "display_name": "Beta-HCG",
+    "unit": "mIU/mL",
+    "aliases": ["b-hcg", "beta hcg", "bhcg", "human chorionic gonadotropin", "hcg", "beta-hcg level", "serum hcg", "serum beta hcg", "b hcg"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 5},
+        "BORDERLINE_HIGH": {"min": 5, "max": 25},
+        "HIGH":            {"min": 25}
+      }
+    }
+  },
+  "Urine Specific Gravity": {
+    "display_name": "Urine Specific Gravity",
+    "unit": "",
+    "aliases": ["specific gravity", "sp gravity", "sp. gravity", "urine sp gravity", "urine sp. gravity"],
+    "ranges": {
+      "default": {
+        "LOW":             {"max": 1.005},
+        "NORMAL":          {"min": 1.005, "max": 1.030},
+        "HIGH":            {"min": 1.030}
+      }
+    }
+  },
+  "Urine pH": {
+    "display_name": "Urine pH",
+    "unit": "",
+    "aliases": ["urine ph level", "ph urine", "urinary ph"],
+    "ranges": {
+      "default": {
+        "LOW":             {"max": 4.5},
+        "NORMAL":          {"min": 4.5, "max": 8.0},
+        "HIGH":            {"min": 8.0}
+      }
+    }
+  },
+  "Urine RBC": {
+    "display_name": "Urine RBC",
+    "unit": "/HPF",
+    "aliases": ["urine red blood cells", "rbc in urine", "urine rbc count", "red cells urine"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 3},
+        "BORDERLINE_HIGH": {"min": 3, "max": 5},
+        "HIGH":            {"min": 5, "max": 25},
+        "CRITICAL_HIGH":   {"min": 25}
+      }
+    }
+  },
+  "Urine WBC": {
+    "display_name": "Urine WBC",
+    "unit": "/HPF",
+    "aliases": ["urine white blood cells", "wbc in urine", "urine wbc count", "pus cells", "pus cells in urine", "white cells urine"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 5},
+        "BORDERLINE_HIGH": {"min": 5, "max": 10},
+        "HIGH":            {"min": 10, "max": 50},
+        "CRITICAL_HIGH":   {"min": 50}
+      }
+    }
+  },
+  "Urine Epithelial Cells": {
+    "display_name": "Urine Epithelial Cells",
+    "unit": "/HPF",
+    "aliases": ["epithelial cells", "epithelial cells in urine", "squamous epithelial cells"],
+    "ranges": {
+      "default": {
+        "NORMAL":          {"min": 0, "max": 5},
+        "HIGH":            {"min": 5}
+      }
+    }
+  }
+}
