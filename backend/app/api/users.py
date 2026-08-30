@@ -11,7 +11,7 @@ GUEST_USER_ID = "00000000-0000-0000-0000-000000000000"
 
 
 def _get_current_user(request: Optional[Request] = None) -> dict:
-    return {"id": GUEST_USER_ID, "email": "guest@bioinsight.local"}
+    return {"id": GUEST_USER_ID, "email": "guest@bloodsense.local"}
 
 
 router = APIRouter(prefix="/user", tags=["user"])

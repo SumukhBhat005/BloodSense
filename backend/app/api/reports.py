@@ -5,6 +5,7 @@ Uses in-memory fallback store to ensure zero 500 Network Errors.
 """
 import uuid
 import json
+import re
 import bleach
 import logging
 from datetime import datetime
@@ -32,6 +33,25 @@ MAGIC_BYTES = {
 }
 
 GUEST_USER_ID = "00000000-0000-0000-0000-000000000000"
+
+UUID_REGEX = re.compile(r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$", re.IGNORECASE)
+
+
+def _validate_uuid(value: str, name: str = "ID") -> str:
+    """Validate that a string is a proper UUID format. Raises 400 if not."""
+    if not UUID_REGEX.match(value):
+        raise HTTPException(status_code=400, detail=f"Invalid {name} format.")
+    return value
+
+
+def _sanitize_error(error: str) -> str:
+    """Strip internal details from error messages before storing/returning them."""
+    # Remove file paths, tracebacks, API keys, connection strings
+    safe = re.sub(r"(?i)(api[_-]?key|password|secret|token)[=:][^\s]+", "[REDACTED]", str(error))
+    safe = re.sub(r"(/[\w./]+\.py)", "[file]", safe)
+    safe = re.sub(r"line \d+", "", safe)
+    # Truncate
+    return safe[:200] if len(safe) > 200 else safe
 
 
 def _validate_file(file_bytes: bytes, filename: str) -> str:
@@ -130,6 +150,7 @@ async def list_reports(request: Request):
 
 @router.get("/{report_id}", response_model=ReportDetail)
 async def get_report(report_id: str, request: Request):
+    _validate_uuid(report_id, "report_id")
     report_data = store.get_report_by_id(report_id)
     if not report_data:
         raise HTTPException(status_code=404, detail="Report not found")
@@ -157,6 +178,7 @@ async def get_report(report_id: str, request: Request):
 
 @router.delete("/{report_id}", status_code=204)
 async def delete_report(report_id: str, request: Request):
+    _validate_uuid(report_id, "report_id")
     store.delete_report_by_id(report_id)
     return None
 
@@ -169,6 +191,8 @@ async def update_biomarker(
     request: Request,
 ):
     """Allow users to correct extracted biomarker values before final analysis."""
+    _validate_uuid(report_id, "report_id")
+    _validate_uuid(biomarker_id, "biomarker_id")
     report_data = store.get_report_by_id(report_id)
     if not report_data:
         raise HTTPException(status_code=404, detail="Report not found")

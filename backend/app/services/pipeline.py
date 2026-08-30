@@ -15,6 +15,7 @@ from app.services.extraction.tesseract_fallback import extract_with_tesseract
 from app.services.analysis.severity_classifier import classify_all
 from app.services.analysis.risk_engine import evaluate_risk_rules, compute_overall_status
 from app.services.explanation.gemini_explainer import generate_explanation
+from app.api.reports import _sanitize_error
 from app import store
 
 logger = logging.getLogger(__name__)
@@ -160,4 +161,4 @@ async def run_pipeline(
 
     except Exception as e:
         logger.exception(f"Pipeline failed for report {report_id}: {e}")
-        update_status("failed", str(e))
+        update_status("failed", _sanitize_error(str(e)))

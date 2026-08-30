@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     max_file_size_mb: int = 10
     upload_rate_limit: str = "5/hour"
     tesseract_cmd: str = ""
+    allowed_origins: str = ""  # Comma-separated production origins, e.g. "https://bloodsense.vercel.app"
 
     class Config:
         env_file = ".env"
